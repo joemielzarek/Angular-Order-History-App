@@ -1,0 +1,28 @@
+{
+  "name": "angular-day1",
+  "version": "1.0.0",
+  "description": "Lectures covering Angular. See Branches for demo code for each lecture/topic.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "author": "Kris",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "body-parser": "^1.15.1",
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.4",
+    "pg": "^4.5.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdszafranski/prime-angular-lectures.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kdszafranski/prime-angular-lectures/issues"
+  },
+  "homepage": "https://github.com/kdszafranski/prime-angular-lectures#readme",
+  "devDependencies": {}
+}

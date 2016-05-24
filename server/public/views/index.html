@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Angular Magic</title>
+    <link rel="stylesheet" href="/vendors/bootstrap.min.css" />
+    <link rel="stylesheet" href="/styles/stylesheet.css" />
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/scripts/clientapp.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div class="container-fluid" ng-controller="IndexController">
+      <div class="col-md-4" >
+        <h1>Customers</h1>
+        <div ng-repeat="person in people">
+            <h2>{{person.first_name + " " + person.last_name}}</h2>
+            <button ng-if="person.count > 0" ng-click="currentCustomer(person.id)">View Orders</button>
+            <p ng-if="person.count == 0">No Orders</p>
+        </div>
+        </div>
+      <div class="col-md-8">
+        <h1>Orders</h1>
+        <table>
+          <tr>
+            <th>Order ID</th>
+            <th>Product</th>
+            <th>Price per Unit</th>
+            <th>Quantity</th>
+            <th>Delivery Address</th>
+          </tr>
+          <tr ng-repeat="order in orders" ng-show="order.customer_id == showCustomer">
+            <td>{{order.id}}</td>
+            <td>{{order.description}}</td>
+            <td>{{order.unit_price}}</td>
+            <td>{{order.quantity}}</td>
+
+        </table>
+
+
+          </div>
+    </div>
+
+
+</body>
+</html>
